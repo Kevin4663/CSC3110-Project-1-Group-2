@@ -34,7 +34,7 @@ This is useful because your teammates can use this result to:
 
 How to run:
 Open terminal in the same folder and run:
-python moe_part.py
+python read.py
 
 Expected output:
 Vertices array:
