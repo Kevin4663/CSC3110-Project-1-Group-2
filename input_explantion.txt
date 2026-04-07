@@ -1,0 +1,46 @@
+Files included:
+1. input.txt
+   This is a simple test input file for Project 1.
+
+2. read.py
+   This Python file reads the input file and separates:
+   - vertices
+   - edges
+
+Simple input format explanation:
+- Line 1 contains all vertices separated by spaces.
+  Example:
+  A B C D E
+
+- Every next line is one directed weighted edge written like:
+  source, destination, weight
+
+  Example:
+  A, B, 18
+
+Meaning:
+- edge starts at A
+- edge goes to B
+- weight is 18
+
+What this code outputs:
+- the vertices array
+- the edges list
+
+This is useful because your teammates can use this result to:
+- build the adjacency matrix
+- run Algorithm 1
+- run Algorithm 2
+
+How to run:
+Open terminal in the same folder and run:
+python moe_part.py
+
+Expected output:
+Vertices array:
+['A', 'B', 'C', 'D', 'E']
+
+Edges read from file:
+(A, B, 18)
+(A, C, 14)
+...
