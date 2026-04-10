@@ -1,37 +1,42 @@
-# Algorithm 2
+### Pseudocode for algorithim2
 
-## Pseudocode
+**Algorithm:** `algorithim2(f)`
+**Input:** A file object `f` containing graph data
 
-n ← length(vertices)
-vertex_dict ← empty hash map
+1.  **Initialize Data**
+    - Set `lines` to an empty list.
+    - **For each** `line` in `f`:
+      - **If** `line.strip()` is not empty:
+        - Append `line.strip()` to `lines`.
 
-for k from 0 to n-1
-vertex_dict[vertices[k]] ← k
+2.  **Map Vertices**
+    - `vertices` $\leftarrow$ split the first element of `lines` by whitespace.
+    - Initialize an empty dictionary `vertex_dict`.
+    - Set `n` to 0.
+    - **For each** `v` in `vertices`:
+      - `vertex_dict[v]` $\leftarrow n$
+      - Increment `n` by 1.
 
-create matrix[n][n]
-for i from 0 to n-1
-for j from 0 to n-1
-matrix[i][j] ← -999
+3.  **Initialize Matrix**
+    - Initialize `adj_matrix` as an empty list.
+    - **Repeat** for the number of `vertices`:
+      - Create an empty list `row`.
+      - **Repeat** for the number of `vertices`:
+        - Append `-999` to `row`.
+      - Append `row` to `adj_matrix`.
 
-for each (u, v, w) in edges
-i ← vertex_dict[u]
-j ← vertex_dict[v]
-matrix[i][j] ← w
+4.  **Populate Matrix**
+    - **For each** `edge` in `lines` (skipping the first line):
+      - `rule` $\leftarrow$ split `edge` by commas.
+      - `start` $\leftarrow$ `rule[0]` stripped.
+      - `end` $\leftarrow$ `rule[1]` stripped.
+      - `weight` $\leftarrow$ `rule[2]` stripped.
+      - `row` $\leftarrow$ `vertex_dict[start]`.
+      - `col` $\leftarrow$ `vertex_dict[end]`.
+      - `adj_matrix[row][col]` $\leftarrow$ integer value of `weight`.
 
-return matrix
-
-## Explanation
-
-- The algorithm initializes an $n \times n$ matrix with a default value of -999 to represent infinity.
-- A hash map (dictionary) is constructed to map each vertex name directly to its integer index.
-- Instead of a sequential search, the algorithm uses this map to find row and column indices in constant time.
-- Each edge (u, v, w) is processed by retrieving indices directly from the dictionary.
-- This approach produces the same adjacency matrix as Algorithm 1 but improves indexing efficiency.
-
-## Time Complexity
-
-- Building the hash map requires a single pass through the vertex list, taking $O(V)$ time.
-- Processing each edge requires hash map lookups, which take $O(1)$ time on average.
-- For $E$ edges and $V$ vertices, the total time complexity is:
-
-$$O(V + E)$$
+5.  **Output**
+    - Print `vertices`.
+    - Print "matrix =".
+    - **For each** `row` in `adj_matrix`:
+      - Print `row`.
