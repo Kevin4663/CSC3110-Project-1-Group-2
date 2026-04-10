@@ -1,4 +1,5 @@
 # Algorithm1.py
+from MatrixSetup_OutputFormat import createMatrix, printMatrix
 
 with open("input.txt") as f:
     lines = f.readlines()
@@ -16,7 +17,7 @@ for line in lines[1:]:
     edges.append((u, v, w))
 
 n = len(vertices)
-matrix = [[-999] * n for _ in range(n)]
+matrix = createMatrix(vertices)
 
 for u, v, w in edges:
     
@@ -35,7 +36,4 @@ for u, v, w in edges:
     if i != -1 and j != -1:
         matrix[i][j] = w
 
-print(f"vertices = {vertices}")
-print("matrix =")
-for row in matrix:
-    print(row)
+    printMatrix(vertices, matrix)
