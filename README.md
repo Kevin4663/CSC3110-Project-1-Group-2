@@ -24,6 +24,16 @@ The output of the program includes:
 
 Since this project follows the course rubric, it is not just one code file. Our team also prepared the required pseudocode, analysis, and supporting files.
 
+## Files
+- `Algorithm1.py` : builds the adjacency matrix using sequential search
+- `Algorithm2.py` : builds the adjacency matrix using a dictionary
+- `MatrixSetup_OutputFormat.py` : shared functions for matrix creation and output formatting
+- `input.txt` : sample graph input
+- `algo1_pseudocode.md` : pseudocode for Algorithm 1
+- `algo2_pseudocode.md` : pseudocode for Algorithm 2
+- `Analysis.md` : comparison and complexity analysis
+- `SampleOutput.txt` : sample output from running the program
+
 ## Algorithm Direction
 Because we are working on Project 1, we decided to use two different algorithms that solve the same problem in different ways.
 
