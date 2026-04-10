@@ -1,3 +1,5 @@
+# MatrixSetup_OutputFormat.py
+
 import sys
 
 def createMatrix(v): #v for list of vertices
@@ -15,17 +17,10 @@ def createMatrix(v): #v for list of vertices
 
 def printMatrix(v, mat): #given the list of vertices, v , and a matrix, mat
     #printing/formatting
-    sys.stdout.write("      ")
-    for vertice in v:
-        sys.stdout.write(str(vertice))
-        sys.stdout.write("     ")
-    print()
-
-    i = 0
+    print(f"vertices = {v}")
+    print("matrix =")
     for row in mat:
-        print(v[i], " ", row)
-        i += 1
-    return
+        print(row)
 
 
 

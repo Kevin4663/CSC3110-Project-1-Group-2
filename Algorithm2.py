@@ -1,3 +1,5 @@
+# Algorithm2.py
+
 INPUT_FILE = "input.txt"
 
 def algorithim2(f):
