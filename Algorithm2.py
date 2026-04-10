@@ -1,4 +1,5 @@
 # Algorithm2.py
+from MatrixSetup_OutputFormat import createMatrix, printMatrix
 
 INPUT_FILE = "input.txt"
 
@@ -19,13 +20,7 @@ def algorithim2(f):
          n+=1
     
     # initialize adj matrix with infinities, -999
-    adj_matrix = []
-    size = len(vertices)
-    for _ in range(size):
-        row = [] 
-        for _ in range(size):
-            row.append(-999)
-        adj_matrix.append(row)
+    adj_matrix = createMatrix(vertices)
 
     # populate adj matrix
     for edge in lines[1:]: # skip first line
@@ -39,11 +34,7 @@ def algorithim2(f):
 
         adj_matrix[row][col] = int(weight)
 
-    print(f"vertices = {vertices}")
-    
-    print("matrix =")
-    for row in adj_matrix:
-        print(row)
+    printMatrix(vertices, adj_matrix)
 
 def main():
     with open(INPUT_FILE) as f:
