@@ -16,11 +16,12 @@ def algorithim2(f):
          vertex_dict[v] = n
          n+=1
     
-    # initialize adj matrix with infinities
+    # initialize adj matrix with infinities, -999
     adj_matrix = []
-    for _ in range(len(vertices)):
+    size = len(vertices)
+    for _ in range(size):
         row = [] 
-        for _ in range(len(vertices)):
+        for _ in range(size):
             row.append(-999)
         adj_matrix.append(row)
 
