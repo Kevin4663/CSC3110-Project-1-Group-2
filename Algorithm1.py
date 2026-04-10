@@ -36,4 +36,4 @@ for u, v, w in edges:
     if i != -1 and j != -1:
         matrix[i][j] = w
 
-    printMatrix(vertices, matrix)
+printMatrix(vertices, matrix)

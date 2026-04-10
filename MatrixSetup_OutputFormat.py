@@ -1,7 +1,5 @@
 # MatrixSetup_OutputFormat.py
 
-import sys
-
 def createMatrix(v): #v for list of vertices
     
     #initialization

@@ -3,7 +3,7 @@ from MatrixSetup_OutputFormat import createMatrix, printMatrix
 
 INPUT_FILE = "input.txt"
 
-def algorithim2(f):
+def algorithm2(f):
     lines = []
     for line in f:
         if line.strip(): 
@@ -38,7 +38,7 @@ def algorithim2(f):
 
 def main():
     with open(INPUT_FILE) as f:
-        algorithim2(f)
+        algorithm2(f)
 
 if __name__ == "__main__":
         main()
